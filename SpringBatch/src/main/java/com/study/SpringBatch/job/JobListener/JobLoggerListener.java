@@ -18,7 +18,7 @@ public class JobLoggerListener implements JobExecutionListener {
 
     @Override
     public void afterJob(JobExecution jobExecution) { // 잡이 실행한 후
-        log.info(AFTER_MESSAGE , jobExecution.getJobInstance().getJobName() , jobExecution.getExitStatus());
+        log.info(AFTER_MESSAGE , jobExecution.getJobInstance().getJobName() , jobExecution.getStatus());
 
         if(jobExecution.getStatus() == BatchStatus.FAILED){
             //이메일이나 , 문자 처리 가능
