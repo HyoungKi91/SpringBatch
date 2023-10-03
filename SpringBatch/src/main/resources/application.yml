@@ -4,6 +4,7 @@ spring:
       initialize-schema: always
     job:
       names: ${job.name:NONE}
+      enabled: false  #spring boot가 실행될때 해당 잡의 파라미터가 존대하더라도 해당 job을 실행시키지 않음
   h2:
     console:
       enabled: true
